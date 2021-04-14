@@ -1,3 +1,4 @@
+# https://olimpiada.ic.unicamp.br/pratique/pj/2014/f1/fliper/
 entrada = input().split(" ")
 P = int(entrada[0])
 R = int(entrada[1])
