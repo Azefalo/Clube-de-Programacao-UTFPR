@@ -19,9 +19,9 @@ termino_total = (termino_hora*60*60)+(termino_minuto*60)+(termino_segundo)
 
 
 total_segundos = (termino_total + (termino_dia*24*60*60)) - (inicio_total + (inicio_dia*24*60*60))
-resultado_dias = int(total_segundos/24/60/60)
-resultado_horas = int((total_segundos - resultado_dias*24*60*60)/60/60)
-resultado_minutos = int((total_segundos - (resultado_horas*60*60 + resultado_dias*24*60*60))/60)
+resultado_dias = int(total_segundos//24//60//60) # O "//" pega o valor inteiro da divisão
+resultado_horas = int((total_segundos - resultado_dias*24*60*60)//60//60)
+resultado_minutos = int((total_segundos - (resultado_horas*60*60 + resultado_dias*24*60*60))//60)
 resultado_segundos = total_segundos - (resultado_dias*24*60*60 + resultado_horas*60*60 + resultado_minutos*60)
 
 print(f"{resultado_dias} dia(s)")
